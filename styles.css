@@ -3,6 +3,7 @@
     --primary-color: #FFA500; /* Orange Accent */
     --background-color: #121212; /* Dark Background */
     --text-color: #FFFFFF; /* White Text */
+    --light-background-color: #1A1A1A; /* Lighter Background for description */
     --font-family: 'Arial', sans-serif; /* Default Modern Font */
 }
 
@@ -93,22 +94,22 @@ nav {
 /* Grid Layout */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
     width: 100%;
     max-width: 1200px;
-    margin-top: 20px;
+    margin-top: 320px;
     overflow: auto;
 }
 
 .grid-item {
     background-color: #1e1e1e;
-    padding: 20px;
     border-radius: 10px;
     text-align: center;
-    position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-item:hover {
@@ -121,33 +122,21 @@ nav {
     color: var(--primary-color);
     text-decoration: none;
     font-size: 1.1em;
+    padding: 20px;
 }
 
-.tooltip {
-    visibility: hidden;
-    width: 200px;
-    background-color: var(--text-color);
-    color: var(--background-color);
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; 
-    left: 50%;
-    margin-left: -100px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.grid-item:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
+.separator {
+    height: 1px;
+    background-color: #333333;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .description {
-    margin-top: 10px;
+    background-color: var(--light-background-color);
+    padding: 10px 20px;
     font-size: 0.9em;
+    border-radius: 0 0 10px 10px;
 }
 
 /* Footer */
