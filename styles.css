@@ -1,13 +1,19 @@
 /* Root variables for easy theming */
 :root {
-    --primary-color: #FFA500; /* Orange Accent */
-    --background-color: #121212; /* Dark Background */
-    --text-color: #FFFFFF; /* White Text */
-    --light-background-color: #1A1A1A; /* Lighter Background for description */
-    --font-family: 'Arial', sans-serif; /* Default Modern Font */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --text-color: #ffffff; /* Light text for dark background */
+    --background-color: #121212; /* Dark background */
+    --primary-color: #ff9800; /* Orange accent */
+    --light-background-color: #353535; /* Slightly lighter dark shade */
 }
 
-/* General Styles */
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: var(--font-family);
@@ -17,27 +23,32 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh;
-    padding: 10px; /* Ensure 10px padding on left and right */
+    height: 100vh;
+    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100vw; /* Ensures body does not exceed viewport width */
 }
 
 header {
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     position: fixed;
     top: 0;
-    background-color: var(--background-color);
+    background-color: #1e1e1e; /* Slightly lighter dark shade for header */
     z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Darker shadow for depth */
 }
 
 nav {
     width: 100%;
-    text-align: left;
-    padding: 10px;
+    padding: 15px;
+    padding-right: 15px; /* Added padding on the right side */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #1e1e1e; /* Consistent with header */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); /* Refined shadow */
 }
 
 .menu-icon {
@@ -52,27 +63,24 @@ nav {
 }
 
 .menu a {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Orange accent for links */
     text-decoration: none;
-    font-size: 1.2em;
-    position: relative;
-    transition: color 0.3s;
+    font-size: 1em;
+    font-weight: 500; /* Adjusted font weight */
+    padding: 8px 15px; /* Adjusted padding */
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out; /* Enhanced transition for all properties */
 }
 
-.menu a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+.menu a:hover, .menu a:focus {
+    background-color: rgba(255, 154, 0, 0.2); /* Lighter orange for hover effect */
+    color: #ffffff; /* Ensure text remains visible */
+    text-decoration: none;
 }
 
-.menu a:hover::after {
-    width: 100%;
+/* Add right margin to the last item in the menu */
+.menu a:last-child {
+    margin-right: 20px;
 }
 
 #menu-toggle {
@@ -95,11 +103,6 @@ nav {
 .title {
     font-size: 2em;
     font-weight: bold;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
 }
 
 .header-image {
@@ -115,9 +118,9 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    width: calc(100% - 20px); /* Ensure 10px border on left and right */
+    width: 100%;
     max-width: 1200px;
-    margin-top: 320px;
+    margin-top: 150px; /* Adjusted from 320px to 150px */
     overflow: auto;
 }
 
@@ -144,10 +147,10 @@ nav {
 }
 
 .separator {
-    height: 1px;
-    background-color: #333333;
+    height: 2px;
+    background-color: #bb7000;
     width: 80%;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 .description {
@@ -162,7 +165,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     background-color: #1e1e1e;
 }
