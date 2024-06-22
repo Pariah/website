@@ -120,7 +120,7 @@ nav {
     padding: 20px;
     width: 100%;
     max-width: 1200px;
-    margin-top: 150px; /* Adjusted from 320px to 150px */
+    margin-top: 100px; /* Adjusted from 320px to 150px */
     overflow: auto;
 }
 
@@ -131,12 +131,12 @@ nav {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    border: 2px solid transparent; /* Add an invisible border */
 }
 
 .grid-item:hover {
     background-color: #333333;
-    transform: scale(1.05);
-    transition: transform 0.3s;
+    border: 2px solid var(--primary-color); /* Change the color of the border on hover */
 }
 
 .grid-item a {
@@ -147,10 +147,12 @@ nav {
 }
 
 .separator {
-    height: 2px;
-    background-color: #bb7000;
+    height: 2px; /* Keep the height as is */
+    background-color: #bb7000; /* Or any color you prefer */
     width: 80%;
-    margin: 0 auto;
+    margin: -1px auto 0 auto; /* Pull the separator up by 1px */
+    position: relative;
+    z-index: 1; /* Ensure it's above the link and description */
 }
 
 .description {
@@ -158,6 +160,9 @@ nav {
     padding: 10px 20px;
     font-size: 0.9em;
     border-radius: 0 0 10px 10px;
+    position: relative;
+    margin-top: -1px; /* Pull the description up by 1px */
+    z-index: 0; /* Ensure it's below the separator */
 }
 
 /* Footer */
