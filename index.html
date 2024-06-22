@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory Homepage</title>
+    <title>Xpariah</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,6 +11,7 @@
         <nav>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <div class="title">Raider</div>
             <div class="menu">
                 <a href="#">Home</a>
                 <a href="#">About</a>
@@ -18,67 +19,14 @@
                 <a href="#">Socials</a>
             </div>
         </nav>
-        <div class="title">Your Site Title</div>
     </header>
-
     <div class="header-image"></div>
-
-    <div class="grid-container">
-        <!-- Example grid items -->
-        <div class="grid-item">
-            <a href="#">Link 1</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 1</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 2</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 2</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 3</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 3</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 4</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 4</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 5</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 5</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 6</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 6</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 7</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 7</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 8</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 8</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 9</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 9</div>
-        </div>
-        <div class="grid-item">
-            <a href="#">Link 10</a>
-            <div class="separator"></div>
-            <div class="description">Short description for Link 10</div>
-        </div>
+    <div class="grid-container" id="grid-container">
+        <!-- Grid items will be added here dynamically -->
     </div>
-
     <footer>
-        &copy; 2024 Your Company. All rights reserved.
+        &copy; 2024 David Boling. All rights reserved.
     </footer>
+    <script src="grid-items.js"></script>
 </body>
 </html>
