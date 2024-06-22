@@ -3,11 +3,11 @@ const gridItems = [
     { title: 'Raider Sheet', description: 'What we obey.', link: 'https://docs.google.com/spreadsheets/d/14VXw3ePBSllsv72Rjbpyj31CDJozkSL_y0rEzijmp7s/edit?gid=63249405#gid=63249405' },
     { title: 'Loot Form', description: 'What we covet.', link: 'https://forms.gle/hFPwaGf3TSRuU8Ej9' },
     { title: 'Required WeakAuras', description: 'What we install.', link: '#' },
+    { title: 'Discord', description: 'Where we talk.', link: 'https://discord.gg/spreadsheets' },
     { title: 'Guild Logs', description: 'Where we parse.', link: 'https://classic.warcraftlogs.com/guild/reports-list/640768' },
     { title: 'GDKP Logs', description: 'Where some of us parse.', link: 'https://classic.warcraftlogs.com/guild/reports-list/648915' },
-    { title: 'Discord', description: 'Where we talk.', link: 'https://discord.gg/spreadsheets' },
-    { title: 'My Wago', description: 'Where I share.', link: 'https://wago.io/p/Xpariah'}
-    // Add more items as needed
+    { title: 'My Wago', description: 'Where I share.', link: 'https://wago.io/p/Xpariah' },
+    { title: 'My Twitch', description: 'Where I stream.', link: 'https://www.twitch.tv/xpariah' }
 ];
 
 // Get the container
